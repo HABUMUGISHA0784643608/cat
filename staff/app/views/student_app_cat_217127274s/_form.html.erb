@@ -1,0 +1,32 @@
+<%= form_with(model: student_app_cat_217127274, local: true) do |form| %>
+  <% if student_app_cat_217127274.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student_app_cat_217127274.errors.count, "error") %> prohibited this student_app_cat_217127274 from being saved:</h2>
+
+      <ul>
+      <% student_app_cat_217127274.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :registrationnumber %>
+    <%= form.number_field :registrationnumber, id: :student_app_cat_217127274_registrationnumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :firstname %>
+    <%= form.text_field :firstname, id: :student_app_cat_217127274_firstname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastname %>
+    <%= form.text_field :lastname, id: :student_app_cat_217127274_lastname %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
